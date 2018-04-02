@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TrainScheduleList>
+    <TrainSchedule>
+        <trainId>1010</trainId>
+        <deptTime>1010</deptTime>
+    </TrainSchedule>
+    <TrainSchedule>
+        <trainId>1011</trainId>
+        <deptTime>610</deptTime>
+    </TrainSchedule>
+    <TrainSchedule>
+        <trainId>1020</trainId>
+        <deptTime>1040</deptTime>
+    </TrainSchedule>
+</TrainScheduleList>
