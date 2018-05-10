@@ -12,8 +12,9 @@
 		<java-version>1.8</java-version>
 		<springframework.version>4.3.0.RELEASE</springframework.version>
 		<jackson.version>2.7.5</jackson.version>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<org.slf4j-version>1.7.5</org.slf4j-version>
 	</properties>
 
 	<dependencies>
@@ -39,23 +40,61 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.0.5.Final</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.0.4.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>jta</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0</version>
+		</dependency>
+
 	</dependencies>
 
-	<!-- <build>
-		<finalName>SpringRest</finalName>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.tomcat.maven</groupId>
-					<artifactId>tomcat7-maven-plugin</artifactId>
-					<version>2.2</version>
-					<configuration>
-						<path>/springrest</path>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build> -->
+	<!-- <build> <finalName>SpringRest</finalName> <pluginManagement> <plugins> 
+		<plugin> <groupId>org.apache.tomcat.maven</groupId> <artifactId>tomcat7-maven-plugin</artifactId> 
+		<version>2.2</version> <configuration> <path>/springrest</path> </configuration> 
+		</plugin> </plugins> </pluginManagement> </build> -->
 
 	<build>
 		<finalName>TrainScheduleREST</finalName>
@@ -65,7 +104,7 @@
 			</resource>
 		</resources>
 	</build>
-	
-	
+
+
 	<artifactId>TrainScheduleREST</artifactId>
 </project>

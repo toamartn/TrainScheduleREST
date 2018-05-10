@@ -1,8 +1,8 @@
 com\intuit\spring\config\AppInitializer.class
-com\intuit\spring\config\AppConfig.class
 com\intuit\spring\model\TrainSchedule.class
 com\intuit\spring\controller\TrainTimeController.class
+com\intuit\spring\service\TrainScheduleService.class
+com\intuit\spring\config\AppConfig.class
 com\intuit\spring\service\MarshalUnMarshal.class
 com\intuit\spring\model\TrainScheduleList.class
-com\intuit\spring\service\TrainScheduleService.class
 com\intuit\spring\dao\TrainScheduleDAO.class

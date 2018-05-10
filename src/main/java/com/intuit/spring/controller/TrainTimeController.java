@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.xml.bind.JAXBException;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -27,6 +29,8 @@ public class TrainTimeController {
 	@Autowired(required=true)
 	private TrainScheduleService trainScheduleService;
 	
+	private static final Log log = LogFactory.getLog(TrainTimeController.class);
+	
 	@PostMapping(value = "/create")
 	public @ResponseBody TrainSchedule createSchedule(@RequestBody TrainSchedule schedule) {
 		TrainSchedule scheduleResponse = trainScheduleService.createSchedule(schedule);
@@ -35,6 +39,7 @@ public class TrainTimeController {
 
 	@GetMapping(value = "/getAll")
 	public @ResponseBody TrainScheduleList getAllSchedules() {
+		log.info("got request for ");
 		List<TrainSchedule> schedules = trainScheduleService.getAllSchedules();
 		TrainScheduleList trainScheduleList = new TrainScheduleList();
 		trainScheduleList.setScheduleList(schedules);
@@ -43,11 +48,12 @@ public class TrainTimeController {
 
 	@GetMapping(value = "/get/{id}")
 	public @ResponseBody TrainSchedule getScheduleForId(@PathVariable ("id") int id) {
+		log.info("got request for "+ id);
 		TrainSchedule  schedule = trainScheduleService.getSchedule(id);
 		return schedule;
 	}
 
-	@PutMapping(value = "/update")
+	@PutMapping(value = "/update/{id}")
 	public @ResponseBody TrainSchedule updateSchedule(@RequestBody TrainSchedule schedule) {
 		TrainSchedule scheduleResponse = trainScheduleService.updateSchedule(schedule);
 		return scheduleResponse;

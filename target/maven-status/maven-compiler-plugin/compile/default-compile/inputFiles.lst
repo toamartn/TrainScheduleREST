@@ -6,3 +6,5 @@ C:\Users\foram\eclipse-workspace\TrainScheduleREST\src\main\java\com\intuit\spri
 C:\Users\foram\eclipse-workspace\TrainScheduleREST\src\main\java\com\intuit\spring\dao\TrainScheduleDAO.java
 C:\Users\foram\eclipse-workspace\TrainScheduleREST\src\main\java\com\intuit\spring\model\TrainScheduleList.java
 C:\Users\foram\eclipse-workspace\TrainScheduleREST\src\main\java\com\intuit\spring\config\AppInitializer.java
+C:\Users\foram\eclipse-workspace\TrainScheduleREST\src\main\java\com\intuit\spring\dao\TrainScheduleDAOHibImpl.java
+C:\Users\foram\eclipse-workspace\TrainScheduleREST\src\main\java\com\intuit\spring\hbm\TrainScheduleMapping.java
